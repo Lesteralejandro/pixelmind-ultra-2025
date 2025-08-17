@@ -71,3 +71,12 @@ a{color:inherit}
 
 @media (max-width:900px){.slide{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.integrations{padding:80px 0;border-top:1px solid #ffffff18}
+.i-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:12px}
+.i-card{padding:16px;border-radius:18px}
+.i-badge{display:inline-block;font-weight:900;background:var(--feature-gradient);color:#0b1022;
+  padding:6px 10px;border-radius:12px;letter-spacing:.2px}
+.i-link{display:inline-block;margin-top:8px;border-bottom:1px solid #ffffff55;text-decoration:none}
+.i-link:hover{transform:translateY(-1px)}
+.i-note{color:#a9b9dc;margin-top:12px}
+
