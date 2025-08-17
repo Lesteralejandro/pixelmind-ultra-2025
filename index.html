@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PixelMind Academy — Micro-Formación con IA (2025)</title>
+  <meta name="description" content="Micro-cursos 5–15 min con tutor de IA, banners 2025 y UX optimizada para conversión." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- HERO con video+partículas -->
+  <header class="hero" id="home">
+    <div class="particles" aria-hidden="true"></div>
+    <!-- Si no tienes video aún, deja solo el poster -->
+    <video class="bg" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+      <source src="assets/neural-network.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-content glass">
+      <span class="badge">🚀 Nuevo: Tutor IA “Mira”</span>
+      <h1 class="title glitch">Evoluciona tu <span class="hi">creatividad</span> con neurociencia e IA</h1>
+      <p class="subtitle">Lecciones cortas + IA que personaliza tu ruta en tiempo real.</p>
+      <div class="ctas">
+        <a class="btn btn-primary magnetic" href="#pricing"><span>Comenzar gratis</span><span class="glow"></span></a>
+        <button class="btn btn-ghost" data-demo="open">▶ Ver demo</button>
+      </div>
+      <div class="proof">
+        <div class="stack"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <p>Se unieron <b class="live" data-base="2400">2,400</b> creativos esta semana</p>
+      </div>
+    </div>
+
+    <div class="shapes" aria-hidden="true">
+      <div class="shape s1 rot"></div>
+      <div class="shape s2 float"></div>
+      <div class="shape s3 pulse"></div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="wrap">
+      <h2 class="section-title">Tu cerebro + Nuestra IA = <span class="grad">Creatividad exponencial</span></h2>
+      <div class="grid">
+        <article class="card tilt" data-tilt>
+          <div class="icon"><img src="assets/logo.svg" alt="" /></div>
+          <h3>Mira AI — Tutor</h3>
+          <p>Adapta contenido según tu objetivo y progreso.</p>
+          <div class="bar"><span class="fill" data-p="94"></span></div>
+          <a class="more" href="#demo">Explorar Mira AI →</a>
+        </article>
+        <article class="card tilt" data-tilt>
+          <div class="icon"><img src="assets/logo.svg" alt="" /></div>
+          <h3>Micro-learning 5–15</h3>
+          <p>Clases cortas, accionables hoy mismo.</p>
+          <a class="more" href="#courses">Ver catálogo →</a>
+        </article>
+        <article class="card tilt" data-tilt>
+          <div class="icon"><img src="assets/logo.svg" alt="" /></div>
+          <h3>Certificados con QR</h3>
+          <p>Comparte logros verificables en 1 clic.</p>
+          <a class="more" href="#verify">Ver ejemplo →</a>
+        </article>
+        <article class="card tilt" data-tilt>
+          <div class="icon"><img src="assets/logo.svg" alt="" /></div>
+          <h3>Integraciones</h3>
+          <p>Canva, Adobe, Figma, y más.</p>
+          <a class="more" href="#integrations">Ver integraciones →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO IA -->
+  <section class="demo" id="demo">
+    <div class="wrap glass">
+      <h2>Prueba a <span class="grad">Mira</span> ahora</h2>
+      <div class="chat">
+        <div class="bubble ai">Hola, soy Mira. ¿En qué área creativa quieres mejorar?</div>
+        <div class="options">
+          <button class="chip" data-resp="design">🎨 Diseño</button>
+          <button class="chip" data-resp="video">🎬 Video</button>
+          <button class="chip" data-resp="marketing">📱 Marketing</button>
+        </div>
+        <div id="out" class="out hidden"></div>
+        <form id="ask" class="ask" autocomplete="off">
+          <input id="q" placeholder="Escribe tu objetivo en 10 palabras..." />
+          <button class="btn btn-primary magnetic" type="submit"><span>Preguntar a Mira</span><span class="glow"></span></button>
+        </form>
+        <p class="note">Con Netlify activo usa <code>/.netlify/functions/tutor</code>. Si no, verás la demo local.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonials" id="testimonials" data-parallax="0.2">
+    <div class="carousel">
+      <article class="slide active">
+        <div class="media">
+          <video autoplay muted loop playsinline poster="assets/testimonial-1.jpg">
+            <source src="assets/testimonial-1.mp4" type="video/mp4" />
+          </video>
+          <div class="overlay"></div>
+        </div>
+        <div class="panel glass">
+          <p class="quote">“En 30 días con PixelMind tripliqué mi productividad. Mira entendió lo que necesitaba.”</p>
+          <div class="author">
+            <div class="avatar"></div>
+            <div><h4>Sarah Chen</h4><small>Creative Director</small></div>
+          </div>
+          <div class="badges"><span>+300% Productividad</span><span>15 Certificaciones</span></div>
+        </div>
+      </article>
+      <div class="dots"><button class="dot active" data-i="0"></button></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <h2 class="section-title">Invierte en tu <span class="grad">evolución creativa</span></h2>
+      <div class="grid">
+        <article class="p-card">
+          <header><h3>Explorador</h3><div class="price">$0<span>/mes</span></div></header>
+          <ul><li>3 micro-cursos/mes</li><li>Chat básico</li><li>1 certificación</li></ul>
+          <a class="btn btn-ghost" href="#signup">Comenzar</a>
+        </article>
+        <article class="p-card featured">
+          <span class="pop">MÁS POPULAR</span>
+          <header><h3>Creativo Pro</h3><div class="price">$29<span>/mes</span></div></header>
+          <ul><li>Cursos ilimitados</li><li>Mira AI completa</li><li>Certificados con QR</li><li>Integraciones</li><li>Comunidad</li></ul>
+          <a class="btn btn-primary magnetic" href="#checkout"><span>Evolucionar ahora</span><span class="glow"></span></a>
+          <div class="timer">⏰ Termina en: <b class="count" data-seconds="86400">24:00:00</b></div>
+        </article>
+        <article class="p-card">
+          <header><h3>Empresas</h3><div class="price">Desde $199<span>/mes</span></div></header>
+          <ul><li>Hasta 10 usuarios</li><li>Panel progreso</li><li>Onboarding</li></ul>
+          <a class="btn btn-ghost" href="#contact">Solicitar demo</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© 2025 PixelMind Academy · <a href="legal/terminos.html">Términos</a> · <a href="legal/privacidad.html">Privacidad</a></p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- Widget Mira IA para LMS -->
+<div id="pm-tutor" style="border:1px solid #e9eef5;border-radius:14px;padding:14px;background:rgba(255,255,255,.04);color:#eaf1ff">
+  <div style="font-weight:800;margin-bottom:8px">Mira AI • PixelMind</div>
+  <div id="pm-log" style="height:200px;overflow:auto;border:1px solid #ffffff22;border-radius:10px;padding:10px;margin-bottom:10px"></div>
+  <form id="pm-form">
+    <input id="pm-input" placeholder="Pregunta al tutor..." style="width:75%;padding:10px;border-radius:10px;border:1px solid #cfd8e3;background:#0b1022;color:#eaf1ff">
+    <button type="submit" style="padding:10px 14px;border-radius:10px;background:#fff;color:#111;border:none;font-weight:800">Enviar</button>
+  </form>
+</div>
+<script>
+const API_BASE = ''; // vacío = mismo dominio (Netlify). Si el LMS va en otro dominio, pon tu URL base.
+const log = document.getElementById('pm-log');
+document.getElementById('pm-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const msg = document.getElementById('pm-input').value.trim(); if(!msg) return;
+  log.innerHTML += `<div><strong>Tú:</strong> ${msg}</div>`;
+  try{
+    const r = await fetch(`${API_BASE}/.netlify/functions/tutor`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ message: msg, profile: { origen: 'LMS' } }) });
+    const data = await r.json();
+    log.innerHTML += `<div style="margin-top:6px"><strong>Mira:</strong> ${data.answer}</div>`;
+  }catch{ log.innerHTML += `<div style="margin-top:6px"><strong>Mira:</strong> No pude conectar. Revisa configuración.</div>`; }
+  log.scrollTop = log.scrollHeight;
+});
+</script>
